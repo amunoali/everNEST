@@ -1,0 +1,47 @@
+.btn-sign-in, button.btn.btn-lg.mt-3{
+    background-color: rgb(86 116 246);
+    color: #ffff;
+    border: rgb(59 130 246);;
+}
+.btn-sign-up, button.btn-signup, button.btn-sign-up{
+    background-color: rgb(25 76 167);
+    color: #ffff;
+    border: rgb(25 76 167);
+ 
+}
+strong.fw-bold{
+    line-height: 4rem;
+}
+a.btn-header.btn-lg{
+    background-color: blue;
+}
+a.blue{
+    color: blue;
+}
+button.btn.btn-lg.mt-3:hover{
+    background-color: white;
+    color: #000;
+}
+button.btn.fa.fa-heart, button.btn.fa.fa-bookmark, button.btn.fa.fa-trash{
+    font-size: 1.9rem;
+    border: none;
+    color: salmon;
+}
+button.btn.btn-comment.fa.fa-trash{
+    color: blue;
+}
+a.btn.btn-red{
+    background: red;
+    border: none;
+}
+img.max-w-sm{
+    max-width: 40rem;
+}
+.bg-white{
+    display: flex;
+}
+.fixed-top{
+    position: relative;
+}
+
+.date{font-size: 11px}.comment-text{font-size: 12px}.fs-12{font-size: 12px}.shadow-none{box-shadow: none}.name{color: #007bff}.cursor:hover{color: blue}.cursor{cursor: pointer}.textarea{resize: none}

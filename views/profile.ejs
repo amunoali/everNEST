@@ -1,0 +1,106 @@
+<%- include('partials/logged-in-header') -%>
+
+<!-- <main class="container mt-5 ">
+  <div class="row justify-content-center mt-5">
+    <h1 class="btn btn-ghost normal-case text-xl mb-md-4 text-center">Recommend A Book </h1>
+      <section class="col-6 ">
+          <form action="/post/createPost" method="POST">
+              <div class="mb-3">
+                <label for="title" class="form-label">Title</label>
+                <input type="text" class="form-control" id="title" name="title">
+              </div>
+              <div class="mb-3">
+                <label for="author" class="form-label">Author</label>
+                <input type="text" class="form-control" id="author"  name="author">
+              </div>
+              <div class="mb-3">
+                <label for="imgUpload" class="form-label">Image</label>
+                <input type="file" class="form-control" id="imageUpload" name="file">
+              </div>
+              <div class="mb-3">
+                <label for="purchase" class="form-label">Purchase At: <em>(Link)</em> </label>
+                <input type="text" class="form-control" id="purchase" name="purchase">
+              </div>
+              <div class="mb-3">
+                <label for="pdf" class="form-label">PDF File Link <em>(If Possible)</em>:</label>
+                <input type="text" class="form-control" id="pdf" name="pdf">
+              </div>
+                <div class="text-center"> 
+              <button type="submit" class="btn btn-signup btn-lg ">Submit</button>
+              </div>
+            </form>
+      </section>
+
+  </div>
+</main> -->
+
+<div class="container mt-5">
+  <div class="row justify-content-center mt-5">
+   <h1 class="text-2xl font-bold tracking-tight text-gray-900 text-center">Recommend a Book </h1>
+      <div class="col-6 ">
+        <form action="/post/createPost" enctype="multipart/form-data" method="POST">
+          <div class="mb-3">
+              <label for="title" class="form-label">Title</label>
+              <input type="text" class="form-control" id="title" name="title">
+          </div>
+          <div class="mb-3">
+            <label for="author" class="form-label">Author</label>
+            <input type="text" class="form-control" id="author" name="author">
+          </div>
+          <div class="mb-3">
+            <textarea id="summary" class="form-control" name="summary" rows="9" cols="70" placeholder="Enter Summary of Book Here"></textarea>
+          </div>
+          <div class="mb-3">
+            <label for="description" class="form-label">Amazon Purchase Link <em>(If Available)</em></label>
+            <input type="url" class="form-control" id="purchase" name="purchase">
+          </div>
+          <div class="mb-3">
+            <label for="description" class="form-label">PDF File <em>(If Available)</em></label>
+            <input type="url" class="form-control" id="pdf" name="pdf">
+          </div>
+          <div class="mb-3">
+            <label for="imgUpload" class="form-label">Book Image</label>
+            <input type="file" class="form-control" id="imageUpload" name="file">
+          </div> 
+          <div class="text-center"> 
+             <button type="submit" class="btn-sign-up btn " value="Upload">Submit</button>
+          </div>
+        </form>
+      </div>
+      <div class=" text-center ">
+        <a class="btn btn-red" href="/feed">Return to Book Feed</a>
+      </div> 
+  </div>
+  <div class="bg-white">
+    <div class="mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
+      <h2 class="text-2xl font-bold tracking-tight text-gray-900">Your Recommendations: </h2>
+  
+      <ul class="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
+        <% for(var i=0; i<posts.length; i++) {%>
+        <div class="group relative">
+          <div class="min-h-80 aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-md bg-gray-200 group-hover:opacity-75 lg:aspect-none lg:h-80">
+            <a href="/post/<%= posts[i]._id%>">
+            <img src="<%= posts[i].image%>" alt="Front of men&#039;s Basic Tee in black." class="h-full w-full object-cover object-center lg:h-full lg:w-full">
+          </a>
+        </div>
+          <div class="mt-4 flex justify-between">
+            <div>
+              <h3 class="text-sm text-gray-700">
+                <a href="/post/<%= posts[i]._id%>"> <span aria-hidden="true" class="absolute inset-0"></span> <%= posts[i].title%>  </a>
+              </h3>
+              <p class="mt-1 text-sm text-gray-500"> <%= posts[i].author%> </p>
+            </div>
+        
+          </div>
+        </div>
+        <% } %>
+      </ul>
+    </div>
+  </div>
+        
+
+
+<%- include('partials/footer') -%>
+
+
+

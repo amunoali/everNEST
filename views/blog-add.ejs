@@ -1,0 +1,66 @@
+<%- include('partials/logged-in-header') -%>
+
+<div class="container ">
+    <div class="row justify-content-center mt-5">
+     <h1 class="text-2xl font-bold tracking-tight text-gray-900 text-center">Submit A Blog Post</h1>
+        <div class="col-6 ">
+    <form action="/blog/createBlog" enctype="multipart/form-data" method="POST">
+     <div class="mb-3">
+         <label for="title" class="form-label">Title</label>
+         <input type="text" class="form-control" id="title" name="title">
+     </div>
+     <div class="mb-3">
+       <label for="author" class="form-label">Author</label>
+       <input type="text" class="form-control" id="author" name="author">
+     </div>
+     <div class="mb-3">
+     
+       <textarea id="message" class="form-control" name="message" rows="9" cols="70" placeholder="Enter Body Paragraph Here"></textarea>
+
+     </div>
+     <div class="mb-3">
+       <label for="imgUpload" class="form-label">Image</label>
+       <input type="file" class="form-control" id="imageUpload" name="file">
+     </div>
+     <div class="text-center"> 
+        <button type="submit" class="btn-sign-up btn " value="Upload">Submit</button>
+     </div>
+   </form>
+ </div>
+    <div class=" text-center ">
+      <a class="btn btn-red" href="/blog">Return to Blog Feed</a>
+    </div> 
+  </div>
+  
+</div>  
+
+<div class="bg-white">
+    <div class="mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
+      <h2 class="text-2xl font-bold tracking-tight text-gray-900 text-center" >Your Submitted Blogs: </h2>
+  
+      <ul class="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
+        <% for(var i=0; i<blogs.length; i++) {%>
+        <div class="group relative">
+          <div class="min-h-80 aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-md bg-gray-200 group-hover:opacity-75 lg:aspect-none lg:h-80">
+            <a href="/blog/<%= blogs[i]._id%>">
+            <img src="<%= blogs[i].image%>" alt="Front of men&#039;s Basic Tee in black." class="h-full w-full object-cover object-center lg:h-full lg:w-full">
+          </a>
+        </div>
+          <div class="mt-4 flex justify-between">
+            <div>
+              <h3 class="text-sm text-gray-700">
+                <a href="/blog/<%= blogs[i]._id%>"> <span aria-hidden="true" class="absolute inset-0"></span> <%= blogs[i].title%>  </a>
+              </h3>
+              <p class="mt-1 text-sm text-gray-500"> <%= blogs[i].author%> </p>
+            </div>
+        
+          </div>
+        </div>
+        <% } %>
+      </ul>
+    </div>
+  </div>
+
+
+
+<%- include('partials/footer') -%>

@@ -1,0 +1,113 @@
+<%- include('partials/logged-in-header') -%>
+
+<div class="bg-white">
+    <!-- Image gallery -->
+    <div class="mx-auto ">
+      <div class="aspect-w-3 aspect-h-4  rounded-lg lg:block " >
+        <img src="<%= post.image %>" alt="Two each of gray, white, and black shirts laying flat." >
+      </div>
+
+    </div>
+    <!-- Product info -->
+    <div class="mx-auto max-w-2xl px-4   lg:pt-16 lg:pb-24">
+      <div class="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">
+        <h1 class="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl"> <%= post.title %> </h1>
+        <!-- Description and details -->
+        <div>
+          <div class="mt-2 mb-2">
+          <h3 class="text-sm font-medium text-gray-900"> <%= post.author %> </h3>
+          </div>
+          <div class="space-y-6">
+            <p class="text-sm font-normal" style="white-space: pre-wrap 	" >     <%-  post.summary %> </p>    
+          </div>
+        </div>
+        
+
+        <div >
+          <h2 class="btn text-base text-gray-900 mt-2">   <a href="<%= post.purchase %>"> Read Here </a> </h2> 
+          <h2 class="btn text-base text-gray-900 mt-2">  <a href="<%= post.pdf %>" >  Read Here  </a> </h2> 
+        </div>
+
+
+
+        <div class=" flex mt-5" >
+          <!-- Like Display -->
+     <form class="flex"   action="/post/likePost/<%= post.id %>?_method=PUT"    method="POST" >
+         <button class="btn fa fa-heart flex" type="submit">   <h3> <%= post.likes %></h3> </button>
+     </form> 
+   <!-- favorite Display -->
+    <form   class=" flex"   action="/post/favoritePost/<%= post.id %>?_method=PUT" method="POST"  >
+     <button class="<%if(post.favorite.includes(user.id)){ %> bi bi-favorite-fill<%} else { %> bi bi-favorite <% }%>    btn fa fa-bookmark " type="submit">  </button>
+     </form>     
+   <!-- Delete Post -->
+  <%if(post.user == user.id){ %>
+  <form  action="/post/deletePost/<%= post.id %>?_method=DELETE"  method="POST"   class=" flex"   >
+  <button class="btn fa fa-trash" type="submit"></button>
+  
+  </form>
+  <%}%> 
+   </div>
+   
+      </div>
+
+      
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container mt-5">
+  <h2 class="text-2xl font-bold tracking-tight text-gray-900 text-center text-center mb-3">See What Customers Are Saying</h2>
+  <div class="d-flex justify-content-center row">
+      <div class="col-md-8">
+        <% for(var i=0; i<comments.length; i++) {%>
+          <div class="d-flex flex-column comment-section"> 
+            <span class="d-block font-weight-bold name">  <%= comments[i].createdBy %>  </span>             
+             <span class="date text-black-50">  <%= comments[i].createdAt %>  </span>
+              <div class="bg-white p-2">
+               
+                      <div class="d-flex flex-column justify-content-start ml-2">
+                        <%if(comments[i].createdById == user.id) { %>
+                     <form  action="/comment/deleteComment/<%=post._id%>/<%= comments[i]._id %>?_method=DELETE"   method="POST" >
+                    <button type="submit" class="btn btn-comment fa fa-trash"></button>
+                  </form>
+                    
+                      </div>
+                      <%}%>
+                  <div class="mt-2">
+                      <p class="comment-text">  <%= comments[i].comment%>   </p>
+                  </div>
+
+              </div>
+          
+          </div>
+          <% } %>
+          <div class="bg-white"> 
+            <div class="d-flex flex-row fs-12"> 
+                <div class="like p-2 "><i class="fa fa-thumbs-o-up"></i><span class="ml-1">Post A Comment</span></div>
+              
+            </div>
+        </div>
+
+        <div class="bg-light p-2">
+          <form action="/comment/createComment/<%= post._id%>" method="POST">
+            <div class="d-flex flex-row align-items-start"><textarea class="form-control ml-1 shadow-none textarea" type="text" id="comment" name="comment"></textarea></div>
+            <div class="mt-2 text-right"><button class="btn-sign-up btn mr-3" type="submit">Post comment</button><button class="btn-sign-up btn" type="reset">Cancel</button></div>
+          </form>
+          </div>
+      </div>
+
+  </div>
+</div>
+                      
+
+          <%- include('partials/footer') -%>
