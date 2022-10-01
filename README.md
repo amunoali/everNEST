@@ -1,7 +1,9 @@
 ## everNEST
 A full-stack web application for all book lovers-mainly self-help category. 
 
-https://res.cloudinary.com/amunoali/image/upload/v1664645630/everNEST_g1cx0f.png
+
+![image](https://res.cloudinary.com/amunoali/image/upload/v1664645630/everNEST_g1cx0f.png)
+
 
 
 **Link to project:**  <br>
