@@ -6,7 +6,7 @@ A full-stack web application for all book lovers-mainly self-help category.
 
 
 
-**Link to project:**  <br>
+**Link to project:**  https://evernest-project.herokuapp.com/ <br>
 **Demo User** <br>
 email: test@test.com <br>
 password: Testing123
