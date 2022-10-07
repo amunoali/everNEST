@@ -4,18 +4,18 @@
     <!-- Image gallery -->
     <div class="mx-auto ">
       <div class="aspect-w-3 aspect-h-4  rounded-lg lg:block " >
-        <img src="<%= post.image %>" alt="Two each of gray, white, and black shirts laying flat." >
+        <img src="<%= post.image %>" >
       </div>
 
     </div>
     <!-- Product info -->
-    <div class="mx-auto max-w-2xl px-4   lg:pt-16 lg:pb-24">
+    <div class=" mx-auto max-w-2xl px-4   lg:pt-16 lg:pb-24 center">
       <div class="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">
-        <h1 class="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl"> <%= post.title %> </h1>
+        <h1 class="mt-2 text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl"> <%= post.title %> </h1>
         <!-- Description and details -->
         <div>
           <div class="mt-2 mb-2">
-          <h3 class="text-sm font-medium text-gray-900"> <%= post.author %> </h3>
+          <h3 class="text-sm font-medium text-gray-900 text-red-400"> <%= post.author %> </h3> 
           </div>
           <div class="space-y-6">
             <p class="text-sm font-normal" style="white-space: pre-wrap 	" >     <%-  post.summary %> </p>    
@@ -37,7 +37,7 @@
      </form> 
    <!-- favorite Display -->
     <form   class=" flex"   action="/post/favoritePost/<%= post.id %>?_method=PUT" method="POST"  >
-     <button class="<%if(post.favorite.includes(user.id)){ %> bi bi-favorite-fill<%} else { %> bi bi-favorite <% }%>    btn fa fa-bookmark " type="submit">  </button>
+     <button class="<%if(post.favorite.includes(user.id)){ %> fa-solid fa-bookmark<%} else { %> fa-regular fa-bookmark <% }%>     btn btn-bookmarks  " type="submit">  </button>
      </form>     
    <!-- Delete Post -->
   <%if(post.user == user.id){ %>

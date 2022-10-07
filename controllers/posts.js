@@ -86,14 +86,14 @@ module.exports = {
   },
 
   favoritePost: async (req, res)=>{
-    var heart = false
+    var favored = false
     try{
       var post = await Post.findById({_id:req.params.id})
-      heart = (post.favorite.includes(req.user.id))
+      favored = (post.favorite.includes(req.user.id))
     } catch(err){
     }
     //if already bookmarked we will remove user from likes array
-    if(heart){
+    if(favored){
       try{
         await Post.findOneAndUpdate({_id:req.params.id},
           {
@@ -115,7 +115,7 @@ module.exports = {
             })
             
             console.log('Added user to favorite array')
-            res.redirect("/profile")
+            res.redirect(`back`)
         }catch(err){
             console.log(err)
         }

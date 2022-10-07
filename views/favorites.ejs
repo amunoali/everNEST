@@ -5,13 +5,14 @@
   <div class="mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
     <h2 class="text-2xl font-bold tracking-tight text-gray-900 text-center">My Saved Books: </h2>
     <% console.log(posts[0]) %> 
-    <ul class="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
+    <div class="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
+  
       <% for(var i=0; i<posts.length; i++) {%>
-        <%if(posts[i].favorite.includes(user.id)) {%>
+        <%if(posts[i].favorite.includes(user.id)) { %>
           <div class="group relative">
             <div class="min-h-80 aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-md bg-gray-200 group-hover:opacity-75 lg:aspect-none lg:h-80">
               <a href="/post/<%= posts[i]._id%>">
-              <img src="<%= posts[i].image%>" alt="Front of men&#039;s Basic Tee in black." class="h-full w-full object-cover object-center lg:h-full lg:w-full">
+              <img src="<%= posts[i].image%>"  class=" object-cover object-center ">
             </a>
           </div>
             <div class="mt-4 flex justify-between">
@@ -29,7 +30,7 @@
        
           <% } %>
          
-    </ul>
+    </div>
 </div>
 </div>
 

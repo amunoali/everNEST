@@ -25,7 +25,7 @@ button.btn.btn-lg.mt-3:hover{
     background-color: white;
     color: #000;
 }
-button.btn.fa.fa-heart, button.btn.fa.fa-bookmark, button.btn.fa.fa-trash{
+button.btn.fa.fa-heart, button.btn.btn-bookmarks, button.btn.fa.fa-trash{
     font-size: 1.9rem;
     border: none;
     color: salmon;
@@ -74,6 +74,10 @@ li.login{
             display:-webkit-box;
             max-width: 21rem;
         }
+        div.bg-white{
+            display: block;
+        }
+    
 
    
       
