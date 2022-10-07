@@ -26,7 +26,6 @@ button.btn.fa.fa-heart, button.btn.fa.fa-bookmark, button.btn.fa.fa-trash{
     font-size: 1.9rem;
     border: none;
     color: salmon;
-
   
 }
 
@@ -62,7 +61,9 @@ img.max-w-sm{
 .logout{
     display: none;
 }
-
+li.login{
+    margin-right: 1rem;
+}
 .date{font-size: 11px}.comment-text{font-size: 12px}.fs-12{font-size: 12px}.shadow-none{box-shadow: none}.name{color: #007bff}.cursor:hover{color: blue}.cursor{cursor: pointer}.textarea{resize: none}
 
 @media (max-width: 991px) {
