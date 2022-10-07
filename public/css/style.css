@@ -26,7 +26,18 @@ button.btn.fa.fa-heart, button.btn.fa.fa-bookmark, button.btn.fa.fa-trash{
     font-size: 1.9rem;
     border: none;
     color: salmon;
+
+  
 }
+
+button.btn.btn-blog.fa.fa-trash{
+
+font-size: .89rem;
+color: red;
+
+border: none;
+}
+
 button.btn.btn-comment.fa.fa-trash{
     color: blue;
 }
