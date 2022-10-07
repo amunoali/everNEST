@@ -1,13 +1,16 @@
+@import "normalize.css";
+
 .btn-sign-in, button.btn.btn-lg.mt-3{
     background-color: rgb(86 116 246);
     color: #ffff;
-    border: rgb(59 130 246);;
+    border: rgb(59 130 246);
+
 }
 .btn-sign-up, button.btn-signup, button.btn-sign-up{
     background-color: rgb(25 76 167);
     color: #ffff;
     border: rgb(25 76 167);
- 
+
 }
 strong.fw-bold{
     line-height: 4rem;
@@ -26,8 +29,8 @@ button.btn.fa.fa-heart, button.btn.fa.fa-bookmark, button.btn.fa.fa-trash{
     font-size: 1.9rem;
     border: none;
     color: salmon;
-  
 }
+
 
 button.btn.btn-blog.fa.fa-trash{
 
@@ -58,9 +61,6 @@ img.max-w-sm{
 .fixed-top{
     position: relative;
 }
-.logout{
-    display: none;
-}
 li.login{
     margin-right: 1rem;
 }
@@ -71,15 +71,11 @@ li.login{
         margin-bottom: 1rem; 
         } 
         img.max-w-sm {
+            display:-webkit-box;
             max-width: 21rem;
         }
-        img.h-full {
-            height: 76%;
-        }
-        img.w-full{
-            width: 99%;
-        }
+
+   
       
     }
-    
-/* minor chnages */
+

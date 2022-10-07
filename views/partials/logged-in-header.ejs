@@ -16,7 +16,9 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     
      <!-- Customized css  -->
+     <link rel="stylesheet" href="../css/normalize.css">
     <link rel="stylesheet" href="../css/style.css">
+  
 
  
   
@@ -53,7 +55,7 @@
                   <li><a href="/create">Create a Blog</a></li>
                 </ul>
               </li>
-              <li class="logout"><a  href="/logout">Logout</a></li>
+       
             </ul>
           </div>
           <a class="btn btn-ghost normal-case text-xl">EverNEST</a>
@@ -82,7 +84,7 @@
                 <li><a href="/create">Create a Blog</a></li>
               </ul>
             </li>
-            <li class="logout"><a  href="/logout">Logout</a></li>
+        
           </ul>
         </div>
         
@@ -90,7 +92,7 @@
           <label tabindex="0" class="btn btn-ghost btn-circle avatar">
            
          
-            <p><strong>  <%= user.userName %></strong></p>
+            <p><strong class="text-blue-700	">  <%= user.userName %></strong></p>
           
           </label>
           <ul tabindex="0" class="mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52">
