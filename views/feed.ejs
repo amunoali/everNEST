@@ -1,11 +1,14 @@
 <%- include('partials/logged-in-header') -%>
-<div class="hero min-h-screen ">
+<div class="hero  ">
   <div class="hero-content flex-col lg:flex-row-reverse">
     <img src="https://cdn.shopify.com/s/files/1/2130/7259/products/you-are-a-badass-book-jen-sincero_720x@2x.jpg?v=1571719995" class="max-w-sm  " />
-    <div>
-      <h1 class="text-5xl font-bold">Book of the Day</h1>
-      <p class="py-6">Identify and change the self-sabotaging beliefs and behaviors that stop you from getting what you want, Create a life you totally love. And create it NOW, Make some damn money already. The kind you've never made before.</p>
-      <a href="/blog" class="btn btn-primary">Join the Blog</a>
+    <div >
+      <h1 class="text-4xl font-bold text-center">Book of the Day</h1>
+      <p class="py-6 text-center">Identify and change the self-sabotaging beliefs and behaviors that stop you from getting what you want, Create a life you totally love. And create it NOW, Make some damn money already. The kind you've never made before.</p>
+      <div class="text-center">
+          <a href="/blog" class="btn btn-primary">Join the Blog</a>
+      </div>
+    
      
     </div>
   </div>
@@ -15,7 +18,7 @@
 <div class="bg-white">
 
   <div class="mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
-    <h2 class="text-2xl font-bold tracking-tight text-gray-900 text-center">Customers Favorites</h2>
+    <h2 class="text-3xl font-bold tracking-tight text-gray-900 text-center">Customers Favorites</h2>
     <ul class="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
       <% for(var i=0; i<posts.length; i++) {%>
       <div class="group relative">
@@ -27,7 +30,9 @@
         <div class="mt-4 flex justify-between">
           <div>
             <h3 class="text-sm text-gray-700">
-              <a href="/post/<%= posts[i]._id%>"> <span aria-hidden="true" class="absolute inset-0"></span> <%= posts[i].title%>  </a>
+             <strong>
+               <a href="/post/<%= posts[i]._id%>"> <span aria-hidden="true" class="absolute inset-0 "></span> <%= posts[i].title%>  </a>
+             </strong> 
             </h3>
             <p class="mt-1 text-sm text-gray-500"> <%= posts[i].author%> </p>
           </div>

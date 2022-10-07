@@ -34,6 +34,11 @@ a.btn.btn-red{
     background: red;
     border: none;
 }
+button.btn-sign-up.blog-btn{
+    padding: 0.7rem 4.3rem;
+    border: none;
+    border-radius: 0.5rem;
+}
 img.max-w-sm{
     max-width: 40rem;
 }
@@ -43,5 +48,24 @@ img.max-w-sm{
 .fixed-top{
     position: relative;
 }
+.logout{
+    display: none;
+}
 
 .date{font-size: 11px}.comment-text{font-size: 12px}.fs-12{font-size: 12px}.shadow-none{box-shadow: none}.name{color: #007bff}.cursor:hover{color: blue}.cursor{cursor: pointer}.textarea{resize: none}
+
+@media (max-width: 991px) {
+    a.btn-sign-in.btn.btn-nav  {
+        margin-bottom: 1rem; 
+        } 
+        img.max-w-sm {
+            max-width: 21rem;
+        }
+        img.h-full {
+            height: 76%;
+        }
+        img.w-full{
+            width: 99%;
+        }
+      
+    }

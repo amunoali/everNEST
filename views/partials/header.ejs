@@ -21,13 +21,37 @@
         integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
         crossorigin="anonymous"
       />
-  
 
-  
    <!-- Customized css  -->
   <link rel="stylesheet" href="../css/style.css">
       <title>everNEST</title>
   </head>
+  <body>
+  <div class="navbar bg-base-100">
+    <div class="navbar-start">
+      <div class="dropdown">
+        <label tabindex="0" class="btn btn-ghost lg:hidden">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+        </label>
+        <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
+          <li><a href="/login" role="button" class="btn-sign-in btn btn-nav">Login </a></li>
+          <li><a href="/signup" role="button" class="btn-sign-up btn btn-nav">Sign Up </a></li>
+        </ul>
+      </div>
+      <a class="btn btn-ghost normal-case text-xl">everNEST</a>
+    </div>
+    <div class="navbar-center hidden lg:flex">
+      <ul class="menu menu-horizontal p-0">
+        
+      
+        <li><a href="/login" role="button" class="btn-sign-in btn btn-nav">Login </a></li>
+        <li><a href="/signup" role="button" class="btn-sign-up btn btn-nav">Sign Up </a></li>
+      </ul>
+    </div>
+
+  
+  </div>
+<!-- 
   <body class="d-flex h-100s">
     <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: #ffff">
@@ -40,11 +64,11 @@
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
             <a class="btn-sign-in btn btn-nav " href="/login" role="button">Login</a>
-            <a class="btn-sign-up btn btn-nav mx-2" href="/signup" role="button">Sign up</a>
+        <a class="btn-sign-up btn btn-nav mx-2" href="/signup" role="button">Sign up</a>
          
         </div>
       </div>
-    </nav>
+    </nav> -->
 
   
   </body>
