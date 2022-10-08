@@ -15,8 +15,13 @@
 strong.fw-bold{
     line-height: 4rem;
 }
-a.btn-header.btn-lg{
+a.btn.btn-header{
     background-color: blue;
+    color: white;
+    display: flex;
+}
+div.btn-header{
+    padding: 1rem 3rem;
 }
 a.blue{
     color: blue;
@@ -64,6 +69,10 @@ img.max-w-sm{
 li.login{
     margin-right: 1rem;
 }
+div.dropdown.dropdown-end{
+    margin: 1rem 5rem; 
+}
+
 .date{font-size: 11px}.comment-text{font-size: 12px}.fs-12{font-size: 12px}.shadow-none{box-shadow: none}.name{color: #007bff}.cursor:hover{color: blue}.cursor{cursor: pointer}.textarea{resize: none}
 
 @media (max-width: 991px) {
@@ -71,12 +80,15 @@ li.login{
         margin-bottom: 1rem; 
         } 
         img.max-w-sm {
-            display:-webkit-box;
             max-width: 21rem;
         }
         div.bg-white{
             display: block;
         }
+        div.dropdown.dropdown-end{
+            margin: 1rem 2rem;
+        }
+    
     
 
    
