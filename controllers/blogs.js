@@ -7,8 +7,8 @@ module.exports = {
     try {
       //! Changed sort order to desc because it makes more sense
       const blogs = await Blog.find().sort({ createdAt: "desc" }).lean();
-    
-      res.render("blog-feed.ejs", { blogs: blogs, user: req.user });
+
+      res.render("blog-feed.ejs", { blogs: blogs, user: req.user.id });
     } catch (err) {
       console.log(err);
     }

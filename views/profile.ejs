@@ -5,7 +5,7 @@
   <div class="row justify-content-center ">
    <h1 class="text-2xl font-bold tracking-tight text-gray-900 text-center mb-3">Recommend a Book </h1>
       <div class="col-9 ">
-        <form action="/post/createPost" enctype="multipart/form-data" method="POST">
+        <form action="/book/createBook" enctype="multipart/form-data" method="POST">
           <div class="mb-3">
               <label for="title" class="form-label">Title</label>
               <input type="text" class="form-control" id="title" name="title">
@@ -31,31 +31,30 @@
           </div> 
           <div class="text-center"> 
              <button type="submit" class="btn-sign-up blog-btn font-bold " value="Upload">Submit</button>
+             <button id="reset" type="reset" class=" btn-sign-up blog-btn font-bold " >Clear</button>
           </div>
         </form>
       </div>
-      <div class=" text-center ">
-        <a class="btn btn-red" href="/feed">Return to Book Feed</a>
-      </div> 
+ 
   </div>
   <div class="bg-white">
     <div class="mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
       <h2 class="text-2xl font-bold tracking-tight text-gray-900">Your Recommendations: </h2>
   
       <ul class="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
-        <% for(var i=0; i<posts.length; i++) {%>
+        <% for(var i=0; i<books.length; i++) {%>
         <div class="group relative">
           <div class="min-h-80 aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-md bg-gray-200 group-hover:opacity-75 lg:aspect-none lg:h-80">
-            <a href="/post/<%= posts[i]._id%>">
-            <img src="<%= posts[i].image%>"  style="width:  100%; height: 350px;" class="w-full  h-full object-cover object-center ">
+            <a href="/book/<%= books[i]._id%>">
+            <img src="<%= books[i].image%>"  style="width:  100%; height: 350px;" class="w-full  h-full object-cover object-center ">
           </a>
         </div>
           <div class="mt-4 flex justify-between">
             <div>
               <h3 class="text-sm text-gray-700">
-                <a href="/post/<%= posts[i]._id%>"> <span aria-hidden="true" class="absolute inset-0"></span> <%= posts[i].title%>  </a>
+                <a href="/book/<%= books[i]._id%>"> <span aria-hidden="true" class="absolute inset-0"></span> <%= books[i].title%>  </a>
               </h3>
-              <p class="mt-1 text-sm text-gray-500"> <%= posts[i].author%> </p>
+              <p class="mt-1 text-sm text-gray-500"> <%= books[i].author%> </p>
             </div>
         
           </div>

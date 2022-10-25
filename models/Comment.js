@@ -9,9 +9,9 @@ const CommentSchema = new mongoose.Schema({
     type: Number,
     required: true,
   },
-  post: {
+  book: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: "Post",
+    ref: "Book",
   },
   createdBy:{
     type: String,

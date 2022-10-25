@@ -72,6 +72,16 @@ li.login{
 div.dropdown.dropdown-end{
     margin: 1rem 5rem; 
 }
+#container{
+    margin: 0 auto;
+    padding: 2rem 15rem;
+}
+a#logo{
+    border: none;
+}
+#reset{
+    background-color: red;
+}
 
 .date{font-size: 11px}.comment-text{font-size: 12px}.fs-12{font-size: 12px}.shadow-none{box-shadow: none}.name{color: #007bff}.cursor:hover{color: blue}.cursor{cursor: pointer}.textarea{resize: none}
 
@@ -88,6 +98,15 @@ div.dropdown.dropdown-end{
         div.dropdown.dropdown-end{
             margin: 1rem 2rem;
         }
+        #container{
+            margin: 0 auto;
+            padding: 0;
+        }
+        #reset{
+            background-color: red;
+            margin-top: 1rem;
+        }
+        
     
     
 
