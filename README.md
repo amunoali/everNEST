@@ -18,8 +18,7 @@ password: Testing123
 
 
 ## Optimizations
-If I had more time, I would have made the textarea of the body paragraphs to include some of the styling combos-like bolding, italicize, bullet points and allow it to render it in the body paragrah of the books and blogs info. 
-I would have also created a like and comment tab on the blog, just so folks can say their thoughts about the post. 
+
 
 
 # Install
