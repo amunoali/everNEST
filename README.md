@@ -2,11 +2,11 @@
 A full-stack web application for all book lovers-mainly self-help category. 
 
 
-![image](https://res.cloudinary.com/amunoali/image/upload/v1664645630/everNEST_g1cx0f.png)
+![image](https://res.cloudinary.com/amunoali/image/upload/v1671639965/ezgif.com-gif-maker_yu2hzi.gif)
 
 
 
-**Link to project:**  https://evernest-project.herokuapp.com/ <br>
+**Link to project:**  https://evernest.cyclic.app/ <br>
 **Demo User** <br>
 email: test@test.com <br>
 password: Testing123
