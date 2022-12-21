@@ -17,6 +17,7 @@ const blogRoutes = require("./routes/blog");
 //Use .env file in config folder
 require("dotenv").config({ path: "./config/.env" });
 
+
 // Passport config
 require("./config/passport")(passport);
 
@@ -45,9 +46,10 @@ app.use(
     secret: "keyboard cat",
     resave: false,
     saveUninitialized: false,
-    store: new MongoStore({ mongooseConnection: mongoose.connection }),
+   store: new MongoStore({ mongooseConnection: mongoose.connection }),
   })
 );
+
 
 // Passport middleware
 app.use(passport.initialize());
